@@ -30,3 +30,12 @@ def test_stack2():
 
     stack.pop()
     assert stack.pop() == 'one'
+
+def test_emptiness():
+    stack = []
+    assert not stack
+    stack.append('one')
+    assert bool(stack)  # not not stack
+
+    stack.pop()
+    assert not stack
